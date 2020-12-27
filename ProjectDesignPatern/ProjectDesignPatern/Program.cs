@@ -1,6 +1,8 @@
 ﻿
 using ProjectDesignPatern.Exercice1.Models;
+using ProjectDesignPatern.Exercice3.Models;
 using System;
+using System.Collections.Generic;
 
 namespace ProjectDesignPatern
 {
@@ -8,8 +10,31 @@ namespace ProjectDesignPatern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Exercice1();
+            while(true)
+            {
+                Console.Clear();
+                Console.WriteLine("Please select the exercice (1/2/3)");
+                string input = Console.ReadLine();
+                switch(input)
+                {
+                    case "1":
+                        Exercice1();
+                        break;
+
+                    case "2":
+                        break;
+
+                    case "3":
+                        Exercice3();
+                        break;
+
+                    default:
+                        Console.WriteLine("wrong input");
+                        break;
+                }
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+            }
         }
         private static void Exercice1()
         {
@@ -24,6 +49,16 @@ namespace ProjectDesignPatern
             Console.WriteLine(customQueue);
             Console.WriteLine(customQueue.Dequeue());
             Console.WriteLine(customQueue);
+        }
+        private static void Exercice3()
+        {
+            List<Player> players = new List<Player>()
+            {
+                new Player("player0"),
+                new Player("player1"),
+            };
+            Game game = new Game(players, true);
+            game.Start();
         }
     }
 }
