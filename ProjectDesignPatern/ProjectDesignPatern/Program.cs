@@ -57,7 +57,7 @@ namespace ProjectDesignPatern
                 new Player("player0"),
                 new Player("player1"),
             };
-            Game game = new Game(players, true);
+            Game game = new Game(players, 10000, true);
             game.Start();
         }
     }

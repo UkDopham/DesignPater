@@ -11,7 +11,7 @@ namespace ProjectDesignPatern.Exercice3.Models
         private int _currentPosition; // plus opti de stock juste l'index que la position
         private int _money;
         private int _jailCount = 0;
-        private PlayerState _playerState;
+        private PlayerState _playerState = PlayerState.alive;
         #endregion
 
         #region Proprietes
