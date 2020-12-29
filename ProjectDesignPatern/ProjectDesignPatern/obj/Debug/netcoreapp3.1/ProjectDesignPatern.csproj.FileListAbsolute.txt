@@ -22,3 +22,16 @@ C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPat
 C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.dll
 C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.pdb
 C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.genruntimeconfig.cache
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.exe
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.deps.json
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.runtimeconfig.json
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.runtimeconfig.dev.json
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.dll
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.pdb
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.csprojAssemblyReference.cache
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.AssemblyInfoInputs.cache
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.AssemblyInfo.cs
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.csproj.CoreCompileInputs.cache
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.dll
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.pdb
+D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.genruntimeconfig.cache

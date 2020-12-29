@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexa\\Documents\\GitHub\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj": {}
+    "D:\\Documents\\Projets\\Git\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexa\\Documents\\GitHub\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj": {
+    "D:\\Documents\\Projets\\Git\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexa\\Documents\\GitHub\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj",
+        "projectUniqueName": "D:\\Documents\\Projets\\Git\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj",
         "projectName": "ProjectDesignPatern",
-        "projectPath": "C:\\Users\\Alexa\\Documents\\GitHub\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj",
-        "packagesPath": "C:\\Users\\Alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexa\\Documents\\GitHub\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\obj\\",
+        "projectPath": "D:\\Documents\\Projets\\Git\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\ProjectDesignPatern.csproj",
+        "packagesPath": "C:\\Users\\Moi\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\Projets\\Git\\DesignPater\\ProjectDesignPatern\\ProjectDesignPatern\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Moi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

@@ -16,18 +16,19 @@ namespace ProjectDesignPatern
     {
         static void Main(string[] args)
         {
-            while(true)
+            while (true)
             {
                 Console.Clear();
                 Console.WriteLine("Please select the exercice (1/2/3)");
                 string input = Console.ReadLine();
-                switch(input)
+                switch (input)
                 {
                     case "1":
                         Exercice1();
                         break;
 
                     case "2":
+                        Exercice2();
                         break;
 
                     case "3":
@@ -153,6 +154,7 @@ namespace ProjectDesignPatern
      .GroupBy(x => x.Index / n)
      .Select(x => x.Select(v => v.Value).ToList())
      .ToList();
+        }
         private static void Exercice3()
         {
             List<Player> players = new List<Player>()
@@ -164,4 +166,5 @@ namespace ProjectDesignPatern
             game.Start();
         }
     }
+    
 }
