@@ -1,14 +1,11 @@
 ﻿
 using ProjectDesignPatern.Exercice1.Models;
 using ProjectDesignPatern.Exercice2;
+using ProjectDesignPatern.Exercice3.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading;
-using ProjectDesignPatern.Exercice3.Models;
-using System;
-using System.Collections.Generic;
 
 namespace ProjectDesignPatern
 {

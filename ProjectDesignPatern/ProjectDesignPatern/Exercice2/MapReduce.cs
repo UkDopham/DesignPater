@@ -1,11 +1,8 @@
-﻿using ProjectDesignPatern.Exercice2.IPC;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
+﻿using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ProjectDesignPatern.Exercice2
 {
@@ -44,25 +41,16 @@ namespace ProjectDesignPatern.Exercice2
 
         private MapFunction _map;
         private ReduceFunction _reduce;
-        public List<Node> nodes;
+
         public Thread[] threads;
 
-        ServerPipe serverPipe;
 
         public MapReduce(int numberOfNodes, MapFunction mapFunction, ReduceFunction reduceFunction)
         {
-            this.nodes = new List<Node>();
             this.threads = new Thread[numberOfNodes];
-
-            for (int i = 0; i < numberOfNodes; i++)
-            {
-                this.nodes.Add(new Node($"clientnode{i}"));
-            }
 
             _map = mapFunction;
             _reduce = reduceFunction;
-
-
         }
         public IEnumerable<KeyValuePair<K2, V2>> NodeMap(IEnumerable<KeyValuePair<K1, V1>> input)
         {
@@ -83,7 +71,7 @@ namespace ProjectDesignPatern.Exercice2
                 temp++;
                 temp3.Enqueue(i);
                 //Console.WriteLine($"i:{i}  cond:{i < this.threads.Length}  length:{this.threads.Length}");
-                threads[i] = new Thread(() => { int test; while (!temp3.TryDequeue(out test)) ; this.Map2(inputSplitted[test], mapResult); Console.WriteLine($"temp: {test}"); });
+                threads[i] = new Thread(() => { int test; while (!temp3.TryDequeue(out test)) ; this.Map(inputSplitted[test], mapResult); Console.WriteLine($"temp: {test}"); });
             }
 
             // Depart threads
@@ -106,7 +94,7 @@ namespace ProjectDesignPatern.Exercice2
         }
         public IEnumerable<KeyValuePair<K2, V3>> NodeReduce(IEnumerable<KeyValuePair<K2, V2>> input)
         {
-            IEnumerable<IGrouping<K2, V2>> groups = this.Shuffling2(input);
+            IEnumerable<IGrouping<K2, V2>> groups = this.Shuffling(input);
             //int s = groups.Count();
 
             List<IEnumerable<IGrouping<K2, V2>>> inputSplitted =
@@ -125,7 +113,7 @@ namespace ProjectDesignPatern.Exercice2
             for (int i = 0; i < this.threads.Length; i++)
             {
                 temp3.Enqueue(i);
-                threads[i] = new Thread(() => { int test; while (!temp3.TryDequeue(out test)) ; this.Reduce2(inputSplitted[test], reduceResult); });
+                threads[i] = new Thread(() => { int test; while (!temp3.TryDequeue(out test)) ; this.Reduce(inputSplitted[test], reduceResult); });
             }
 
             // Depart threads
@@ -148,41 +136,13 @@ namespace ProjectDesignPatern.Exercice2
         }
 
 
-        private IEnumerable<KeyValuePair<K2, V2>> Map(IEnumerable<KeyValuePair<K1, V1>> input)
-        {
-            var q = from pair in input
-                    from mapped in _map(pair.Key, pair.Value)
-                    select mapped;
-
-            return q;
-        }
-
-        private IEnumerable<KeyValuePair<K2, V3>> Reduce(IEnumerable<KeyValuePair<K2, V2>> intermediateValues)
-        {
-            // First, group intermediate values by key 
-            var groups = from pair in intermediateValues
-                         group pair.Value by pair.Key into g
-                         select g;   // Reduce on each group 
-            var reduced = from g in groups
-                          let k2 = g.Key
-                          from reducedValue in _reduce(k2, g)
-                          select new KeyValuePair<K2, V3>(k2, reducedValue);
-
-            return reduced;
-        }
-
-        public IEnumerable<KeyValuePair<K2, V3>> Execute(IEnumerable<KeyValuePair<K1, V1>> input)
-        {
-            return Reduce(Map(input));
-        }
-
         public IEnumerable<KeyValuePair<K2, V3>> NodeExecute(IEnumerable<KeyValuePair<K1, V1>> input)
         {
             return NodeReduce(NodeMap(input));
         }
 
 
-        private void Map2(IEnumerable<KeyValuePair<K1, V1>> input, ConcurrentQueue<KeyValuePair<K2, V2>> queue)
+        private void Map(IEnumerable<KeyValuePair<K1, V1>> input, ConcurrentQueue<KeyValuePair<K2, V2>> queue)
         {
             var q = from pair in input
                     from mapped in _map(pair.Key, pair.Value)
@@ -200,7 +160,7 @@ namespace ProjectDesignPatern.Exercice2
 
         }
 
-        private IEnumerable<IGrouping<K2, V2>> Shuffling2(IEnumerable<KeyValuePair<K2, V2>> intermediateValues)
+        private IEnumerable<IGrouping<K2, V2>> Shuffling(IEnumerable<KeyValuePair<K2, V2>> intermediateValues)
         {
             var groups = from pair in intermediateValues
                          group pair.Value by pair.Key into g
@@ -208,7 +168,7 @@ namespace ProjectDesignPatern.Exercice2
 
             return groups;
         }
-        private void Reduce2(IEnumerable<IGrouping<K2, V2>> groups, ConcurrentQueue<KeyValuePair<K2, V3>> queue)
+        private void Reduce(IEnumerable<IGrouping<K2, V2>> groups, ConcurrentQueue<KeyValuePair<K2, V3>> queue)
         {
 
             var reduced = from g in groups
@@ -224,61 +184,6 @@ namespace ProjectDesignPatern.Exercice2
 
 
 
-
-
-
-
-
-
-        private static int[][] SplitInputSimple(int[] inputData, int n)
-        {
-            int sizeArrayMax = inputData.Length / n;
-            int index = 0;
-
-            int[][] res = new int[n][];
-
-
-            for (int i = 0; i < n; i++)
-            {
-                res[i] = new int[(inputData.Length - index > sizeArrayMax) ? sizeArrayMax : inputData.Length - index];
-                for (int j = 0; j < res[i].Length; j++)
-                {
-                    res[i][j] = inputData[index];
-                    index++;
-                }
-            }
-            return res;
-        }
-
-
-
-
-
-
-
-
     }
 
-    public static class MapReduceMethods
-    {
-        public static IList<KeyValuePair<string, int>> MapFromMem(string key, string value)
-        {
-            List<KeyValuePair<string, int>> result = new List<KeyValuePair<string, int>>();
-            foreach (var word in value.Split(' '))
-            {
-                result.Add(new KeyValuePair<string, int>(word, 1));
-            }
-            return result;
-        }
-
-        public static IEnumerable<int> Reduce(string key, IEnumerable<int> values)
-        {
-            int sum = 0;
-            foreach (int value in values)
-            {
-                sum += value;
-            }
-            return new int[1] { sum };
-        }
-    }
 }
