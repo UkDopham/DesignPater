@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
+using ProjectDesignPatern.Exercice3.Models;
+using System;
+using System.Collections.Generic;
 
 namespace ProjectDesignPatern
 {
@@ -13,8 +16,31 @@ namespace ProjectDesignPatern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Exercice2();
+            while(true)
+            {
+                Console.Clear();
+                Console.WriteLine("Please select the exercice (1/2/3)");
+                string input = Console.ReadLine();
+                switch(input)
+                {
+                    case "1":
+                        Exercice1();
+                        break;
+
+                    case "2":
+                        break;
+
+                    case "3":
+                        Exercice3();
+                        break;
+
+                    default:
+                        Console.WriteLine("wrong input");
+                        break;
+                }
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
+            }
         }
         private static void Exercice1()
         {
@@ -127,6 +153,15 @@ namespace ProjectDesignPatern
      .GroupBy(x => x.Index / n)
      .Select(x => x.Select(v => v.Value).ToList())
      .ToList();
+        private static void Exercice3()
+        {
+            List<Player> players = new List<Player>()
+            {
+                new Player("player0"),
+                new Player("player1"),
+            };
+            Game game = new Game(players, 10000, true);
+            game.Start();
         }
     }
 }

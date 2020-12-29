@@ -9,3 +9,16 @@ C:\Users\Alexandre\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesig
 C:\Users\Alexandre\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.AssemblyInfo.cs
 C:\Users\Alexandre\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.dll
 C:\Users\Alexandre\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.pdb
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.exe
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.deps.json
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.runtimeconfig.json
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.runtimeconfig.dev.json
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.dll
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\bin\Debug\netcoreapp3.1\ProjectDesignPatern.pdb
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.csprojAssemblyReference.cache
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.AssemblyInfoInputs.cache
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.AssemblyInfo.cs
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.csproj.CoreCompileInputs.cache
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.dll
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.pdb
+C:\Users\Alexa\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.genruntimeconfig.cache
