@@ -68,8 +68,9 @@ namespace ProjectDesignPatern.Exercice2
         {
             List<IEnumerable<KeyValuePair<K1, V1>>> inputSplitted =
                DataProcess<K1, V1>.SplitInputSimple2(input, this.threads.Length).ToList();
+
             if (this.threads.Length != inputSplitted.Count)
-                throw new Exception("Data not splitted rigth!");
+                throw new Exception("Data not splitted right!");
 
             // Creation queue des resultats
             ConcurrentQueue<KeyValuePair<K2, V2>> mapResult = new ConcurrentQueue<KeyValuePair<K2, V2>>();
@@ -82,7 +83,7 @@ namespace ProjectDesignPatern.Exercice2
                 temp++;
                 temp3.Enqueue(i);
                 //Console.WriteLine($"i:{i}  cond:{i < this.threads.Length}  length:{this.threads.Length}");
-                threads[i] = new Thread(() => { int test ; while(!temp3.TryDequeue(out test)); this.Map2(inputSplitted[test], mapResult); Console.WriteLine($"temp: {test}"); });
+                threads[i] = new Thread(() => { int test; while (!temp3.TryDequeue(out test)) ; this.Map2(inputSplitted[test], mapResult); Console.WriteLine($"temp: {test}"); });
             }
 
             // Depart threads
@@ -111,7 +112,7 @@ namespace ProjectDesignPatern.Exercice2
             List<IEnumerable<IGrouping<K2, V2>>> inputSplitted =
                     DataProcess<K2, V2>.SplitInputSimple2(groups, this.threads.Length).ToList();
             if (this.threads.Length != inputSplitted.Count)
-                throw new Exception("Data not splitted rigth!");
+                throw new Exception("Data not splitted right!");
 
             // Creation queue des resultats
             ConcurrentQueue<KeyValuePair<K2, V3>> reduceResult = new ConcurrentQueue<KeyValuePair<K2, V3>>();

@@ -61,39 +61,8 @@ namespace ProjectDesignPatern
         {
             Console.WriteLine("Exercice 2");
 
-
-            //int tailleInput = 6;
-            //int n = 0;
-            //List<int> inputData0 = new List<int>();
-            //for (int i = 0; i < tailleInput; i++)
-            //{
-            //    inputData0.Add(n);
-            //    n++;
-            //    if (n >= 5) n = 0;
-            //}
-
-            //int nb = 3;
-            //List<List<int>> groups = SplitInputSimple2(inputData0, inputData0.Count/nb);
-
-            //Console.WriteLine("Raw data");
-            //foreach (int item in inputData0)
-            //{
-            //    Console.Write(item + " ");
-            //}
-
-            //Console.WriteLine($"\nSplitted data ({nb})");
-            //foreach (List<int> item in groups)
-            //{
-            //    foreach (int i in item)
-            //    {
-            //        Console.Write($"{i} ");
-            //    }
-            //    Console.WriteLine();
-            //}
-            //Console.ReadKey();
-
             Console.WriteLine("Test MapReduce : Word Counting");
-
+            int numOfThreads = 4;
 
             List<KeyValuePair<string, string>> inputData = new List<KeyValuePair<string, string>>() {
                 new KeyValuePair<string, string>("1", "Test working data the data the Test is"),
@@ -108,7 +77,7 @@ namespace ProjectDesignPatern
             }
             Console.WriteLine();
 
-            using (var sr = new StreamReader(@"textWikipedia.txt"))
+            using (var sr = new StreamReader(@"textMoliere.txt"))
             {
                 // Read the stream as a string, and write the string to the console.
                 int cpt2 = 0;
@@ -126,7 +95,7 @@ namespace ProjectDesignPatern
 
 
             MapReduce<string, string, string, int, int> letters = new MapReduce<string, string, string, int, int>(
-                8,
+                numOfThreads,
                 MapReduceMethods.MapFromMem,
                 MapReduceMethods.Reduce
                 );
@@ -147,14 +116,6 @@ namespace ProjectDesignPatern
         }
 
 
-        public static List<List<int>> SplitInputSimple2(List<int> inputData, int n)
-        {
-            return inputData
-     .Select((x, i) => new { Index = i, Value = x })
-     .GroupBy(x => x.Index / n)
-     .Select(x => x.Select(v => v.Value).ToList())
-     .ToList();
-        }
         private static void Exercice3()
         {
             List<Player> players = new List<Player>()
