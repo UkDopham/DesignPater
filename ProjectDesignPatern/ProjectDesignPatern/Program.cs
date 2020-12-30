@@ -59,7 +59,7 @@ namespace ProjectDesignPatern
             Console.WriteLine("Exercice 2");
 
             Console.WriteLine("Test MapReduce : Word Counting");
-            int numOfThreads = 4;
+            int numOfThreads = 8;
 
             List<KeyValuePair<string, string>> inputData = new List<KeyValuePair<string, string>>() {
                 new KeyValuePair<string, string>("1", "Test working data the data the Test is"),
@@ -74,7 +74,7 @@ namespace ProjectDesignPatern
             }
             Console.WriteLine();
 
-            using (var sr = new StreamReader(@"textMoliere.txt"))
+            using (var sr = new StreamReader(@"textMoliere2.txt"))
             {
                 // Read the stream as a string, and write the string to the console.
                 int cpt2 = 0;

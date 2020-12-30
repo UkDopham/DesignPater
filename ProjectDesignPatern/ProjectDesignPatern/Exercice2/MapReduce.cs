@@ -57,7 +57,7 @@ namespace ProjectDesignPatern.Exercice2
             List<IEnumerable<KeyValuePair<K1, V1>>> inputSplitted =
                DataProcess<K1, V1>.SplitInputSimple2(input, this.threads.Length).ToList();
 
-            if (this.threads.Length != inputSplitted.Count)
+            if (this.threads.Length < inputSplitted.Count)
                 throw new Exception("Data not splitted right!");
 
             // Creation queue des resultats
@@ -66,7 +66,7 @@ namespace ProjectDesignPatern.Exercice2
             // Initialisation des threads
             int temp = 0;
             ConcurrentQueue<int> temp3 = new ConcurrentQueue<int>();
-            for (int i = 0; i < this.threads.Length; i++)
+            for (int i = 0; i < inputSplitted.Count; i++)
             {
                 temp++;
                 temp3.Enqueue(i);
@@ -75,13 +75,13 @@ namespace ProjectDesignPatern.Exercice2
             }
 
             // Depart threads
-            for (int i = 0; i < this.threads.Length; i++)
+            for (int i = 0; i < inputSplitted.Count; i++)
             {
                 threads[i].Start();
             }
 
             // Attente fin threads
-            for (int i = 0; i < this.threads.Length; i++)
+            for (int i = 0; i < inputSplitted.Count; i++)
             {
                 threads[i].Join();
             }
@@ -99,29 +99,28 @@ namespace ProjectDesignPatern.Exercice2
 
             List<IEnumerable<IGrouping<K2, V2>>> inputSplitted =
                     DataProcess<K2, V2>.SplitInputSimple2(groups, this.threads.Length).ToList();
-            if (this.threads.Length != inputSplitted.Count)
+            if (this.threads.Length < inputSplitted.Count)
                 throw new Exception("Data not splitted right!");
 
             // Creation queue des resultats
             ConcurrentQueue<KeyValuePair<K2, V3>> reduceResult = new ConcurrentQueue<KeyValuePair<K2, V3>>();
 
 
-            // Initialisation des threads
 
-            int[] temp = new int[this.threads.Length];
+            // Initialisation des threads
             ConcurrentQueue<int> temp3 = new ConcurrentQueue<int>();
-            for (int i = 0; i < this.threads.Length; i++)
+            for (int i = 0; i < inputSplitted.Count; i++)
             {
                 temp3.Enqueue(i);
                 threads[i] = new Thread(() => { int test; while (!temp3.TryDequeue(out test)) ; this.Reduce(inputSplitted[test], reduceResult); });
             }
 
             // Depart threads
-            for (int i = 0; i < this.threads.Length; i++)
+            for (int i = 0; i < inputSplitted.Count; i++)
                 threads[i].Start();
 
             // Attente fin threads
-            for (int i = 0; i < this.threads.Length; i++)
+            for (int i = 0; i < inputSplitted.Count; i++)
                 threads[i].Join();
 
 
