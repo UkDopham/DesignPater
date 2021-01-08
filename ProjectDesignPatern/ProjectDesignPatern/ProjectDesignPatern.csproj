@@ -5,4 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="ClassDiagram1.cd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationDefinition Include="ClassDiagram1.cd" />
+  </ItemGroup>
+
 </Project>
