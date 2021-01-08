@@ -59,54 +59,51 @@ namespace ProjectDesignPatern
             Console.WriteLine("Exercice 2");
 
             Console.WriteLine("Test MapReduce : Word Counting");
-            int numOfThreads = 8;
+            int numOfThreads = 4;
 
+
+            // initialisation des input
             List<KeyValuePair<string, string>> inputData = new List<KeyValuePair<string, string>>() {
-                new KeyValuePair<string, string>("1", "Test working data the data the Test is"),
-                new KeyValuePair<string, string>("2", "Test the is the working ! the"),
-                new KeyValuePair<string, string>("3", "is data Test the Test data") };
+                new KeyValuePair<string, string>("1", "2 4 5 6 3 5 6"),
+                new KeyValuePair<string, string>("2", "1 3 6 4 6 5 5"),
+                new KeyValuePair<string, string>("3", "6 4 2 3 4 6 5") };
+
 
             List<KeyValuePair<string, string>> inputData2 = new List<KeyValuePair<string, string>>();
-            Console.WriteLine("\nInput data :");
-            foreach (var item in inputData)
+            for (int i = 0; i < 10; i++)// on met dix fois le texte dans l'inputData (  + 10 000 000 lignes )
             {
-                Console.Write($"{item.Key}  |  {item.Value}  ");
-            }
-            Console.WriteLine();
-
-            using (var sr = new StreamReader(@"textMoliere2.txt"))
-            {
-                // Read the stream as a string, and write the string to the console.
-                int cpt2 = 0;
-                while (!sr.EndOfStream)
+                using (var sr = new StreamReader(@"textMoliere.txt")) // texte des Fourberies de scapin
                 {
-                    inputData2.Add(new KeyValuePair<string, string>($"{cpt2}", sr.ReadLine().ToString()));
-                    cpt2++;
+                    // Read the stream as a string, and write the string to the console.
+                    int cpt2 = 0;
+                    while (!sr.EndOfStream)
+                    {
+                        inputData2.Add(new KeyValuePair<string, string>($"{cpt2}", sr.ReadLine().ToString()));
+                        cpt2++;
+                    }
                 }
-
             }
 
-            if (false)
-                inputData2.ForEach(x => Console.WriteLine(x));
-
-
-
+            // initialisation du MapReduce
             MapReduce<string, string, string, int, int> letters = new MapReduce<string, string, string, int, int>(
                 numOfThreads,
-                MapReduceMethods.MapFromMem,
+                MapReduceMethods.Map_Words, // on peut aussi utiliser "MapReduceMethods.Map_Lettres" (pour compter les lettres)
                 MapReduceMethods.Reduce
                 );
-            List<KeyValuePair<string, int>> result = letters.NodeExecute(inputData2).ToList();
-            result.Sort(
-                (a, b) => (a.Value.CompareTo(b.Value) * -1)
-                );
 
-            Console.WriteLine("\nResult :");
+            // lancement des calculs
+            List<KeyValuePair<string, int>> result = letters.Execute(inputData2).ToList();
+
+            result.Sort((a, b) => (a.Value.CompareTo(b.Value) * -1));
+
+            // affichage des resultats
+            int max = 10;
             int cpt = 0;
+            Console.WriteLine($"\nResultats tries : ({max} premiers resultats affiches)");
             foreach (KeyValuePair<string, int> item in result)
             {
                 Console.WriteLine("{0}  ({1})", item.Key, item.Value);
-                if (cpt > 10) break;
+                if (cpt > max) break;
                 cpt++;
             }
 
@@ -124,5 +121,5 @@ namespace ProjectDesignPatern
             game.Start();
         }
     }
-    
+
 }

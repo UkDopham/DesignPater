@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace ProjectDesignPatern.Exercice2
 {
-    public class DataProcess<T, U>
+    public class DataSplitter<T, U>
     {
-        public static IEnumerable<IEnumerable<KeyValuePair<T, U>>> SplitInputSimple2(IEnumerable<KeyValuePair<T, U>> inputData, int n)
+        public static IEnumerable<IEnumerable<KeyValuePair<T, U>>> Splitting(IEnumerable<KeyValuePair<T, U>> inputData, int n)
         {
             int num = inputData.Count() / n;
             if ((inputData.Count() % n != 0)) num += 1;
@@ -15,7 +15,7 @@ namespace ProjectDesignPatern.Exercice2
                      .GroupBy(x => x.Index / num)
                      .Select(x => x.Select(v => v.Value).ToList());
         }
-        public static IEnumerable<IEnumerable<IGrouping<T, U>>> SplitInputSimple2(IEnumerable<IGrouping<T, U>> inputData, int n)
+        public static IEnumerable<IEnumerable<IGrouping<T, U>>> Splitting(IEnumerable<IGrouping<T, U>> inputData, int n)
         {
             int num = inputData.Count() / n;
             if ((inputData.Count() % n != 0)) num += 1;
