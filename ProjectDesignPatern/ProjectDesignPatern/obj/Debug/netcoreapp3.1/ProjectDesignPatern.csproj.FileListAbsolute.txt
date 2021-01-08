@@ -35,3 +35,5 @@ D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj
 D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.dll
 D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.pdb
 D:\Documents\Projets\Git\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.genruntimeconfig.cache
+C:\Users\Alexandre\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\Documents\GitHub\DesignPater\ProjectDesignPatern\ProjectDesignPatern\obj\Debug\netcoreapp3.1\ProjectDesignPatern.genruntimeconfig.cache

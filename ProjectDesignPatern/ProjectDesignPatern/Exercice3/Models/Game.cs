@@ -69,7 +69,7 @@ namespace ProjectDesignPatern.Exercice3.Models
             this._board.Add(new Position("St. Carly", PositionType.basic, 440)); //37
             this._board.Add(new Position("Loop Avenue", PositionType.basic, 440)); //38
             this._board.Add(new Position("South Paris Avenue", PositionType.basic, 460)); //39
-            Console.WriteLine(this._board.Count);
+            Console.WriteLine(this._board.Count); //count = index of last position
         }
         private void InitilizationPlayer(int startingMoney)
         {

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjectDesignPatern.Exercice3.Models.CircularList&lt;T&gt;">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgYAAAIAAAAQACAAAAAABAQAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Exercice3\Models\CircularList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_root" />
+      <Field Name="_currentNode" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice3.Models.CircularNode&lt;T&gt;">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAAgAAAAAAA=</HashCode>
+      <FileName>Exercice3\Models\CircularNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_next" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice3.Models.DiceHelper">
+    <Position X="11.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAAAAAQAAA=</HashCode>
+      <FileName>Exercice3\Models\DiceHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice3.Models.Game">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQIAAAEAALAAAAABAAAAAADAAAAAAgAAA=</HashCode>
+      <FileName>Exercice3\Models\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_board" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_players" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice3.Models.GameHelper">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAgAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercice3\Models\GameHelper.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Game" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice3.Models.Player">
+    <Position X="11.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIBAAAAAAAAAEAggAIAQIAAAAAgAAAAAAAAAEAAA=</HashCode>
+      <FileName>Exercice3\Models\Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_playerState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice3.Models.Position">
+    <Position X="1.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAoAAAAAAACggEEAAgAAAAAAAAAAAgAAABASgAQAQ=</HashCode>
+      <FileName>Exercice3\Models\Position.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_positionType" />
+      <Field Name="_owner" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="ProjectDesignPatern.Exercice3.Models.PlayerState">
+    <Position X="14" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAgAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercice3\Models\PlayerState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ProjectDesignPatern.Exercice3.Models.PositionType">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAEAAAA=</HashCode>
+      <FileName>Exercice3\Models\PositionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
