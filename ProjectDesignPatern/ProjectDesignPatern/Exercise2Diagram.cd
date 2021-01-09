@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjectDesignPatern.Exercice2.DataSplitter&lt;T, U&gt;">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercice2\DataSplitter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice2.MapReduce&lt;K1, V1, K2, V2, V3&gt;">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="ProjectDesignPatern.Exercice2.MapReduce&lt;K1, V1, K2, V2, V3&gt;.MapFunction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Exercice2\MapReduce.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="ProjectDesignPatern.Exercice2.MapReduce&lt;K1, V1, K2, V2, V3&gt;.ReduceFunction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Exercice2\MapReduce.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AIAAAAgAABAAAAQQACCAAAAAAAAAAAYAAAAAAAQAAAA=</HashCode>
+      <FileName>Exercice2\MapReduce.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectDesignPatern.Exercice2.MapReduceMethods">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Exercice2\MapReduceMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
